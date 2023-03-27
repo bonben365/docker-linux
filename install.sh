@@ -15,7 +15,9 @@ then
     sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     sudo chmod a+r /etc/apt/keyrings/docker.gpg
     sudo apt-get update
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y &&
+    sudo systemctl start docker
+    sudo systemctl status docker
 fi
 
 
