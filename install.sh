@@ -1,3 +1,5 @@
+#!/bin/bash
+
 version=$(cat /etc/os-release | grep "PRETTY_NAME" | sed 's/PRETTY_NAME=//g' | sed 's/["]//g' | awk '{print $1}')
 
 if [ $version == "Ubuntu" ]
